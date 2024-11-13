@@ -1,18 +1,27 @@
 import 'package:flutter/material.dart';
+// import 'package:flutter/services.dart';
+// import 'package:travel_app/theme/theme.dart';
 
 void main() {
-  runApp(const MyApp());
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent,
+    statusBarIconBrightness: Brightness.dark,
+  ),
+  );
+  runApp(const TravelApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class TravelApp extends StatelessWidget {
+  const TravelApp({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
+      debugShowCheckedModeBanner: false,
+      theme: TravelTheme.theme,
+      home: const FeedScreen(),
         // This is the theme of your application.
         //
         // TRY THIS: Try running your application with "flutter run". You'll see
@@ -32,6 +41,21 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    );
+  }
+}
+
+class FeedScreen extends StatelessWidget {
+  const FeedScreen({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('feed'),
+      ),
     );
   }
 }
