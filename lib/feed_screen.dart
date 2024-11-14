@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:travel_app_jesus_dzul/place.dart';
 import 'package:travel_app_jesus_dzul/place_card.dart';
 import 'package:travel_app_jesus_dzul/travel_navigation_bar.dart';
+import 'package:travel_app_jesus_dzul/place_detail_screen.dart';
 
 class FeedScreen extends StatelessWidget {
   const FeedScreen({
@@ -40,9 +41,7 @@ class FeedScreen extends StatelessWidget {
                 PageRouteBuilder(
                   pageBuilder: (_, animation, __) => FadeTransition(
                     opacity: animation,
-                    child: Scaffold(
-                      body: Text(place.name),
-                    ),
+                    child: PlaceDetailScreen(place: place),
                   )
                 )
               );
