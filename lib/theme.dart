@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart'; 
+//Justamente este es el codigo que utiliza el texto dependiendo de la clase
 
 
 class TravelTheme {

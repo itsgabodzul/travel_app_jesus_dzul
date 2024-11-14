@@ -20,9 +20,9 @@ class TravelApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: TravelTheme.theme,
-      home: const FeedScreen(),
+      debugShowCheckedModeBanner: false, // Quita la barra de Depuracion
+      theme: TravelTheme.theme, // Usa la clase del archivo theme.dart
+      home: const FeedScreen(), // Usa la clase del archivo Feed_screen.dart
       );
   }
 }

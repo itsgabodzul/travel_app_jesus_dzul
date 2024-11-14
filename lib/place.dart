@@ -1,4 +1,4 @@
-class TravelPlace{
+class TravelPlace{ //Esta es una "base de datos" con ella usamos el contenido que se muestra en el card (o targeta)
   TravelPlace({
    required this.name,
    required this.user,

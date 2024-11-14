@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'; //Este es un tema que usa para no reperti mucho codgio en textos
 
 
 extension TextThemeStylesX on BuildContext {

@@ -16,7 +16,7 @@ class TravelNavigationBar extends StatelessWidget {
   final int currentIndex;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { //Esta parte inserta el "lienzo" para poder usar las coordenadas en la barra de navegacion
     return CustomPaint(
       painter: _NavPainter(),
       child: SizedBox(
@@ -41,7 +41,7 @@ class TravelNavigationBar extends StatelessWidget {
   }
 }
 
-class TravelNavigationBarItem{
+class TravelNavigationBarItem{ //Esta es la clase para poder insertar los iconos
   TravelNavigationBarItem({
     required this.icon,
     required this.selectedIcon,
@@ -51,7 +51,7 @@ class TravelNavigationBarItem{
   final IconData selectedIcon;
 }
 
-class _NavPainter  extends CustomPainter {
+class _NavPainter  extends CustomPainter { //Se lo explico sencillo y como lo entendi, esta parte usa coordendas para recortar y darle esa forma de recorte que tiene
   @override
   void paint(Canvas canvas, Size size) {
     final w = size.width;
@@ -68,12 +68,12 @@ class _NavPainter  extends CustomPainter {
     ..lineTo(w, 0)
     ..lineTo(w5+80, 0)
     ..cubicTo((w5+40), 0, (w5+50), h5, w5+3, h6)
-    ..lineTo(w5-3, h6)
+    ..lineTo(w5, h6)
     ..lineTo(w5, h)
     ..lineTo(0, h);
 
     canvas.drawShadow(path, Colors.black26, 10, false);
-    canvas.drawPath(path, Paint()..color = Colors.pink);
+    canvas.drawPath(path, Paint()..color = Colors.green);
   }
 
   @override
