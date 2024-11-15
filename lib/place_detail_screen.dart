@@ -26,7 +26,10 @@ class PlaceDetailScreen extends StatelessWidget {
               .height,
               minExtent: 240,
               builder: (percent) {
-                return AnimatedDetailHeader(place:place);
+                return AnimatedDetailHeader(
+                  topPercent: ((1-percent) / .7).clamp(0.0, 1.0),
+                  bottomPercent: (percent / .3).clamp(0.0, 1.0),
+                  place:place);
               }
             ),
           ),
