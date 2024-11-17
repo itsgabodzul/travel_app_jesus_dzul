@@ -41,7 +41,10 @@ class FeedScreen extends StatelessWidget {
                 PageRouteBuilder(
                   pageBuilder: (_, animation, __) => FadeTransition(
                     opacity: animation,
-                    child: PlaceDetailScreen(place: place),
+                    child: PlaceDetailScreen(
+                      place: place,
+                      screenHeight: MediaQuery.of(context).size.height,
+                    ),
                   )
                 )
               );

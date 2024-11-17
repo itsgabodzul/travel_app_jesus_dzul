@@ -3,6 +3,7 @@ class TravelPlace{ //Esta es una "base de datos" con ella usamos el contenido qu
    required this.name,
    required this.user,
    required this.imagesUrl,
+   required this.collectionPlace,
    this.id = '',
    this.description = '',
    this.locationDesc = '',
@@ -20,6 +21,7 @@ class TravelPlace{ //Esta es una "base de datos" con ella usamos el contenido qu
    final String locationDesc;
    final String description;
    final List<String> imagesUrl;
+   final List<String> collectionPlace;
 
    static final place = [
     TravelPlace(
@@ -33,6 +35,11 @@ class TravelPlace{ //Esta es una "base de datos" con ella usamos el contenido qu
       'naturales y actividades acuaticas unicas',
       imagesUrl: [
         'https://images.unsplash.com/photo-1650359482825-7f86d419cae9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1625851822976-98ed91e641ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1625851822976-98ed91e641ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+      ],
+      collectionPlace: [
+        'https://images.unsplash.com/photo-1524046909351-84f69445d990?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         'https://images.unsplash.com/photo-1625851822976-98ed91e641ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         'https://images.unsplash.com/photo-1625851822976-98ed91e641ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       ],
@@ -54,6 +61,11 @@ class TravelPlace{ //Esta es una "base de datos" con ella usamos el contenido qu
         'https://images.unsplash.com/photo-1625851822976-98ed91e641ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         'https://images.unsplash.com/photo-1625851822976-98ed91e641ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       ],
+      collectionPlace: [
+        'https://images.unsplash.com/photo-1524046909351-84f69445d990?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1625851822976-98ed91e641ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1625851822976-98ed91e641ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+      ],
       statusTag: StatusTag.popular,
       user: TravelUser.alex,
       locationDesc: 'GOLDEN GATE Cat Bridge, San Francisco California'
@@ -68,6 +80,11 @@ class TravelPlace{ //Esta es una "base de datos" con ella usamos el contenido qu
       'playas de arena blanca, sitios arqueologicos, parques '
       'naturales y actividades acuaticas unicas',
       imagesUrl: [
+        'https://images.unsplash.com/photo-1524046909351-84f69445d990?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1625851822976-98ed91e641ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1625851822976-98ed91e641ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+      ],
+      collectionPlace: [
         'https://images.unsplash.com/photo-1524046909351-84f69445d990?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         'https://images.unsplash.com/photo-1625851822976-98ed91e641ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         'https://images.unsplash.com/photo-1625851822976-98ed91e641ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
@@ -87,6 +104,11 @@ class TravelPlace{ //Esta es una "base de datos" con ella usamos el contenido qu
       'naturales y actividades acuaticas unicas',
       imagesUrl: [
         'https://images.unsplash.com/photo-1686471158562-4b30c9c717ca?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1625851822976-98ed91e641ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1625851822976-98ed91e641ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+      ],
+      collectionPlace: [
+        'https://images.unsplash.com/photo-1524046909351-84f69445d990?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         'https://images.unsplash.com/photo-1625851822976-98ed91e641ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         'https://images.unsplash.com/photo-1625851822976-98ed91e641ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       ],
