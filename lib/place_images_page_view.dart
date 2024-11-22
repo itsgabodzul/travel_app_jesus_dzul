@@ -16,26 +16,26 @@ class PlaceImagesPageView extends StatelessWidget {
       children: [
         Expanded(
           child: PageView.builder(
-            itemCount: imagesUrl.length,
-            physics: const BouncingScrollPhysics(),
+            itemCount: imagesUrl.length, //Definimos el numero de imagenes
+            physics: const BouncingScrollPhysics(), // Le damos un efecto de rebote al desplazamiento
             controller: PageController(viewportFraction: 1),
             itemBuilder: (context, index) {
-              final imageUrl = imagesUrl[index];
+              final imageUrl = imagesUrl[index];  // Obtenemos la URL de la imagen actual
               return Container(
-                margin: const EdgeInsets.only(left: 10, right: 10),
+                margin: const EdgeInsets.only(left: 10, right: 10), //Margen a las imagenes
                 decoration: BoxDecoration(
                   boxShadow: const [
                     BoxShadow(
-                      color: Colors.black,
-                      blurRadius: 10,
+                      color: Colors.black, //Sombra al widget
+                      blurRadius: 10, //Redondeo de las imagenes
                     )
                   ],
                   borderRadius: BorderRadius.circular(20),
                   image: DecorationImage(
-                    image: NetworkImage(imageUrl),
-                    fit: BoxFit.cover,
+                    image: NetworkImage(imageUrl), // Cargamos la imagen desde la URL
+                    fit: BoxFit.cover, //Ocupa toda la pantalla
                     colorFilter: const ColorFilter.mode(
-                      Colors.grey,
+                      Colors.grey, //Filtro
                       BlendMode.multiply,
                     ),
                   ),
@@ -45,12 +45,12 @@ class PlaceImagesPageView extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 10),
-        Row(
+        Row( //Crea un "indicador de pagina" para las imagenes
           mainAxisAlignment: MainAxisAlignment.center,
           children: List.generate(
-            imagesUrl.length,
+            imagesUrl.length, // Crea un punto por cada imagen
             (index) => Container(
-              color: Colors.black,
+              color: Colors.black, // El color de los puntos es negro
               margin: const EdgeInsets.symmetric(horizontal: 3),
               height: 3,
               width: 10,

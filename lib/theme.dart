@@ -11,8 +11,8 @@ class TravelTheme {
     scaffoldBackgroundColor: Colors.white,
     appBarTheme: AppBarTheme(
       elevation: 0,
-      backgroundColor: Colors.white,
-      centerTitle: true,
+      backgroundColor: Colors.white, //Color de AppBar
+      centerTitle: true, //Centrar
       iconTheme: const IconThemeData(color: Colors.black),
       titleTextStyle: GoogleFonts.montserrat(
         color: Colors.black,
@@ -20,12 +20,12 @@ class TravelTheme {
         fontWeight: FontWeight.w500,
       ),
     ),
-    floatingActionButtonTheme: const FloatingActionButtonThemeData(
+    floatingActionButtonTheme: const FloatingActionButtonThemeData( //Color del botom flotante
       backgroundColor: Color(0xff202053),
     ),
     textTheme: textTheme,
   );
-
+ //Crea "tipos de texto"
   static TextTheme get textTheme {
     return TextTheme(
       bodySmall: GoogleFonts.montserrat(

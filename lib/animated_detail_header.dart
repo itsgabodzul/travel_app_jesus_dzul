@@ -21,80 +21,80 @@ class AnimatedDetailHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final topPadding =  MediaQuery.of(context).padding.top;
-    final imagesUrl = place.imagesUrl;
+    final topPadding =  MediaQuery.of(context).padding.top; // Obtiene el padding superior del dispositivo
+    final imagesUrl = place.imagesUrl; // Obtiene la lista de imágenes del lugar
     return Stack(
-      fit: StackFit.expand,
+      fit: StackFit.expand, // Expande los hijos al tamaño completo 
       children: [
         ClipRect(
           child: Stack(
             children: [
               Padding(
                 padding: EdgeInsets.only(
-                  top: (20 + topPadding) * (1- bottomPercent),
-                  bottom: 160 * (1- bottomPercent),
+                  top: (20 + topPadding) * (1- bottomPercent), // Ajusta el padding superior
+                  bottom: 160 * (1- bottomPercent), // Ajusta el padding inferior
                 ),
                   child: Transform.scale(
-                    scale: lerpDouble(1, 1.3, bottomPercent),
-                    child: PlaceImagesPageView(imagesUrl: imagesUrl)
+                    scale: lerpDouble(1, 1.3, bottomPercent), //significa "Linear Interpolation" y calcula un valor intermedio entre dos valores
+                    child: PlaceImagesPageView(imagesUrl: imagesUrl) // Carrusel de imagenes
                   ),
               ),
               Positioned(
-                top: topPadding,
-                left: -60 * (1-bottomPercent),
+                top: topPadding, //  Botón de retroceso
+                left: -60 * (1-bottomPercent), 
                 child: const BackButton(
                   color: Colors.white,)
               ),
-              Positioned(
+              Positioned( 
                 top: topPadding,
-                right: -60 * (1-bottomPercent),
+                right: -60 * (1-bottomPercent),  // Botón de opciones 
                 child: IconButton(
                   onPressed: (){},
                   color: Colors.white,
-                  icon: const Icon(Icons.more_horiz,
+                  icon: const Icon(Icons.more_horiz,  // Botón de opciones 
                   color: Colors.white),
                   )
               ),
-              Positioned(
-                top: lerpDouble(-30, 140, topPercent)!.clamp(topPadding + 10, 140),
-                left: lerpDouble(60, 20, topPercent)!.clamp(20.0, 50.0),
+              Positioned(  // Animación del texto "Nombre del lugar"
+                top: lerpDouble(-30, 140, topPercent)!.clamp(topPadding + 10, 140), // ! para indicar que no será nulo
+                left: lerpDouble(60, 20, topPercent)!.clamp(20.0, 50.0), //(clamp) Restringe el valor interpolado entre un rango específico.
                 right: 20,
                 child: AnimatedOpacity(
-                  opacity: bottomPercent < 1 ? 0:1,
-                  duration: kThemeAnimationDuration,
+                  opacity: bottomPercent < 1 ? 0:1, // Aparece al desplazarse
+                  duration: kThemeAnimationDuration, // Duración de la animación
                   child: Text(
-                    place.name,
-                    style: TextStyle(
+                    place.name, //Nombre del lugar
+                    style: TextStyle( //Estilos del texto
                       color: Colors.white,
-                      fontSize: lerpDouble(20, 40, topPercent),
-                      fontWeight: FontWeight.bold,
+                      fontSize: lerpDouble(20, 40, topPercent), //
+                      fontWeight: FontWeight.bold, //Bold
                     ),
                   ),
                 ),
               ),
-              Positioned(
+              Positioned( //La misma idea del texto anterior
                 left: 20,
                 top: 200,
                 child: AnimatedOpacity(
-                  opacity: bottomPercent < 1 ? 0:1,
-                  duration: kThemeAnimationDuration,
-                  child: GradientStatusTag(
+                  opacity: bottomPercent < 1 ? 0:1, // Aparece al desplazarse
+                  duration: kThemeAnimationDuration, // Duración de la animación
+                  child: GradientStatusTag( //Gradiente (Color en degradado)
                     statusTag: place.statusTag),))
             ],
           ),
         ),
-        Positioned.fill(
+        Positioned.fill( // Contenedor
           top: null,
           bottom: -140 * (1 - topPercent),
-          child: TranslateAnimation(child: _LikesAndSharesContainer(place: place)),
+          child: TranslateAnimation(child: _LikesAndSharesContainer(place: place)), //Informacion de likes y compartidos
         ),
         Align(
           alignment: Alignment.bottomCenter,
           child: Container(color: Colors.white, height: 10),
         ),
-        Positioned.fill(
+        Positioned.fill( // Contenedor de información del usuario, con animación de desplazamiento
           top: null,
-          child: TranslateAnimation(child: _UserInfoContainer(place: place)),
+          child: TranslateAnimation(child: _UserInfoContainer(place: place)), //Trae los datos de la base de datos
           ),
       ],
     );

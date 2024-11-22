@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart'; //Este es un tema que usa para no reperti mucho codgio en textos
 
-
+//Agrega propiedades personalizadas para acceder fácilmente a los estilos de texto
 extension TextThemeStylesX on BuildContext {
   TextStyle get bodyText1 => Theme.of(this).textTheme.bodyLarge!;
 

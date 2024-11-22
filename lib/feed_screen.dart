@@ -27,14 +27,14 @@ class FeedScreen extends StatelessWidget {
           ],
       ),
       body: ListView.builder(
-        itemCount: TravelPlace.place.length,
-        itemExtent: 350,
-        physics: const BouncingScrollPhysics(),
+        itemCount: TravelPlace.place.length, // Número de elementos en la lista
+        itemExtent: 350, // Altura fija para cada elemento de la lista
+        physics: const BouncingScrollPhysics(), // Comportamiento del desplazamiento
         padding: const EdgeInsets.fromLTRB(20, 0, 20, kToolbarHeight+20),
         itemBuilder: (context, index){
           final place = TravelPlace.place[index];
           return PlaceCard(
-            place: place,
+            place: place, // Pasa el lugar al widget PlaceCard
             onPressed: (){
               Navigator.push(
                 context,
@@ -43,7 +43,7 @@ class FeedScreen extends StatelessWidget {
                     opacity: animation,
                     child: PlaceDetailScreen(
                       place: place,
-                      screenHeight: MediaQuery.of(context).size.height,
+                      screenHeight: MediaQuery.of(context).size.height, // Obtiene la altura de la pantalla
                     ),
                   )
                 )
@@ -51,7 +51,7 @@ class FeedScreen extends StatelessWidget {
             },);
         },
       ),
-      extendBody: true,
+      extendBody: true,  // Extiende el cuerpo para evitar traslapes con el FAB
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked, //Centra el icono de locacion
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
@@ -62,11 +62,11 @@ class FeedScreen extends StatelessWidget {
         items: [
           TravelNavigationBarItem(
             icon: CupertinoIcons.chat_bubble, //Añade el icono de Chat
-            selectedIcon: CupertinoIcons.chat_bubble_fill,
+            selectedIcon: CupertinoIcons.chat_bubble_fill, // Ícono de chat seleccionado
           ),
           TravelNavigationBarItem(
             icon: CupertinoIcons.square_split_2x2,  //Añade el icono de Cuadros
-            selectedIcon: CupertinoIcons.square_split_2x2_fill,
+            selectedIcon: CupertinoIcons.square_split_2x2_fill, // Ícono seleccionado
           ),
         ],
       )

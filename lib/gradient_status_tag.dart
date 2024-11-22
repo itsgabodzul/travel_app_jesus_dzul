@@ -14,8 +14,8 @@ class GradientStatusTag extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) { //Este genera la etique te de event o popular lugar
-    String text;
-    List<Color> colors;
+    String text; // Almacena el texto a mostrar en la etiqueta.
+    List<Color> colors; // Almacena los colores del gradiente de fondo.
     switch(statusTag) { // Aqui hace una eleccion segun lo correspondio en la base de datos
       case StatusTag.popular: //Si es StatusTag.popular hara esto, un tag con un gradiente y el texto popular place
       text = 'Popular Place';

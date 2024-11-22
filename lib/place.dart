@@ -1,5 +1,5 @@
 class TravelPlace{ //Esta es una "base de datos" con ella usamos el contenido que se muestra en el card (o targeta)
-  TravelPlace({
+  TravelPlace({ //Representa un lugar turístico con sus propiedades
    required this.name,
    required this.user,
    required this.imagesUrl,
@@ -66,7 +66,7 @@ class TravelPlace{ //Esta es una "base de datos" con ella usamos el contenido qu
         'https://images.unsplash.com/photo-1625851822976-98ed91e641ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         'https://images.unsplash.com/photo-1625851822976-98ed91e641ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
       ],
-      statusTag: StatusTag.popular,
+      statusTag: StatusTag.popular, 
       user: TravelUser.alex,
       locationDesc: 'GOLDEN GATE Cat Bridge, San Francisco California'
     ),
